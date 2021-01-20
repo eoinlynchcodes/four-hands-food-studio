@@ -6,7 +6,7 @@ import roseintro from "../imagesByEoin/roseintro.jpeg";
 function Events() {
   return (
     <section className="aboutContainer">
-      <div className="vl"></div>
+      {/* <div className="vl"></div> */}
       <div>
         {/* <div className="coloredBox violet">
           <h2>Events</h2>
@@ -35,7 +35,7 @@ function Events() {
         </div>
         <br />
       </div>
-      <div className="vl"></div>
+      {/* <div className="vl"></div> */}
     </section>
   );
 }

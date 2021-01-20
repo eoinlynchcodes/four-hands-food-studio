@@ -31,7 +31,7 @@ import Events from './sectionsByEoin/Events';
 import Takeaway from './sectionsByEoin/Takeaway';
 import EditTakeaway from './sectionsByEoin/EditTakeaway';
 import ContactUs from './screens/ContactUs.js';
-import Stockists from './screens/Stockists';
+import Shops from './sectionsByEoin/Shops.js';
 
 function App() { 
 
@@ -49,13 +49,13 @@ function App() {
             exact
           ></Route>
           <Route path="/takeaway" component={Takeaway} ></Route>
-          <Route path="/blog" component={Blog} ></Route>
+          <Route path="/stockists" component={Blog} ></Route>
           <Route path="/events" component={Events} ></Route>
           <Route path="/about" component={About} ></Route>
           <Route path="/shop" component={Shop}></Route>
           <Route path="/contact" component={ContactUs} ></Route>
           <Route path="/signin" component={SigninScreen}></Route>
-          <Route path="/stockists" component={Stockists}> </Route>
+          <Route path="/shops" component={Shops}> </Route>
           <Route path="/register" component={RegisterScreen}></Route>
           <Route path="/edittakeaway" component={EditTakeaway} ></Route>
           <Route path="/shipping" component={ShippingAddressScreen}></Route>

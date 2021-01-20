@@ -24,8 +24,8 @@ function Footer() {
         <a href="/takeaway">
           <p>Takeaway</p>
         </a>
-        <a href="/blog">
-          <p>Blog</p>
+        <a href="/stockists">
+          <p>Stockists</p>
         </a>
         <a href="/events"> 
           <p>Events</p>

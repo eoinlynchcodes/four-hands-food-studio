@@ -29,7 +29,7 @@ function Shop(props) {
 
   return (
     <section className="aboutContainer">
-      <div className="vl"></div>
+      {/* <div className="vl"></div> */}
         {/* <div className="coloredBox violet">
           <h2>Products</h2>
         </div> */}
@@ -105,7 +105,7 @@ function Shop(props) {
         <hr/>
         <br />
 
-        <section id="stockists" className="stockists">
+        {/* <section id="stockists" className="stockists">
           <div className="coloredBox violet">
             <h3>Stockists</h3>
           </div>
@@ -154,8 +154,8 @@ function Shop(props) {
           </table>
           <br />
           <br />
-        </section>
-      <div className="vl"></div>
+        </section> */}
+      {/* <div className="vl"></div> */}
     </section>
   );
 }

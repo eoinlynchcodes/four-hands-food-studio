@@ -8,7 +8,7 @@ function Takeaway() {
   
   return (
     <section className="aboutContainer">
-      <div className="vl"></div>
+      {/* <div className="vl"></div> */}
       <div>
         {/* <div className="coloredBox green">
           <h2>Takeaway</h2>
@@ -41,7 +41,7 @@ function Takeaway() {
         </div>
         </div>
       </div>
-      <div className="vl"></div>
+      {/* <div className="vl"></div> */}
     </section>
   );
 }

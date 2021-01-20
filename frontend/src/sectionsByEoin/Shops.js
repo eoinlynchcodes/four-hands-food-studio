@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
-export default function Stockists() {
-  return (
-    <section className="">
-      <div className="vl"></div>
-      <section id="stockists" className="stockists">
+
+function Shops(){
+
+    return (
+        <section id="" className="">
         <div className="coloredBox violet">
           <h3>Stockists</h3>
         </div>
         <br />
-        <table className="table">
+        <table className="">
           <thead>
             <tr>
               <th>Name</th>
@@ -17,10 +17,6 @@ export default function Stockists() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Nuts and Grains</td>
-              <td>Mullingar, Westmeath</td>
-            </tr>
             <tr>
               <td>Foxes Fruit and Veg</td>
               <td>Mullingar, Westmeath</td>
@@ -50,7 +46,7 @@ export default function Stockists() {
               <td>Dublin</td>
             </tr>
             <tr>
-              <td>The Barrow Market</td>
+              <td>The Fumbally Shop</td>
               <td>Dublin</td>
             </tr>
           </tbody>
@@ -58,7 +54,7 @@ export default function Stockists() {
         <br />
         <br />
       </section>
-      <div className="vl"></div>
-    </section>
-  );
+    );
 }
+
+export default Shops;

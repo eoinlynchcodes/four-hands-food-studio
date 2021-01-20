@@ -16,6 +16,8 @@ export default class MyForm extends React.Component {
   render() {
     const { status } = this.state;
     return (
+      <div className="aboutContainer">
+
       <form
         onSubmit={this.submitForm}
         action="https://formspree.io/f/xnqogkrk"
@@ -62,6 +64,7 @@ export default class MyForm extends React.Component {
           {status === "ERROR" && <p> There was an error. You can reach us on 4handsf@gmail.com</p>}
         </ul>
       </form>
+      </div>
     );
   }
 

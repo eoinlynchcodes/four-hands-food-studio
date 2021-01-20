@@ -935,3 +935,7 @@ img.small {
 .product-image-to-fit{
   max-width: 100%;
 }
+
+.stockists{
+  margin: 3rem auto;
+}
