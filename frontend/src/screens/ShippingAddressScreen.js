@@ -17,6 +17,7 @@ export default function ShippingAddressScreen(props) {
   }
 
   const [paymentMethod, setPaymentMethod] = useState("PayPal");
+  const [emailAddress, setEmailAddress] = useState(shippingAddress.emailAddress);
   const [fullName, setFullName] = useState(shippingAddress.fullName);
   const [address, setAddress] = useState(shippingAddress.address);
   const [city, setCity] = useState(shippingAddress.city);
@@ -29,6 +30,7 @@ export default function ShippingAddressScreen(props) {
     e.preventDefault();
     dispatch(
       saveShippingAddress({
+        emailAddress,
         fullName,
         address,
         city,
@@ -60,6 +62,19 @@ export default function ShippingAddressScreen(props) {
                 placeholder=""
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
+                required
+              ></input>
+            </li>
+
+            <li>
+              <label htmlFor="emailAddress">Email Address:</label>
+              <input
+                type="email"
+                id="emailAddress"
+                name="emailAddress"
+                placeholder=""
+                value={emailAddress}
+                onChange={(e) => setEmailAddress(e.target.value)}
                 required
               ></input>
             </li>
