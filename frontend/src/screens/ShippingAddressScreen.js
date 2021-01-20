@@ -46,7 +46,7 @@ export default function ShippingAddressScreen(props) {
   return (
     <div>
       {/* <CheckoutSteps step1 step2></CheckoutSteps> */}
-      <div>
+      <div className="aboutContainer">
         <form onSubmit={submitHandler}>
           <ul className="form-container">
             <li>

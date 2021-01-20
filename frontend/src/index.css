@@ -96,14 +96,32 @@ button {
   color: #4D453A;
 }
 
+.homeImageToSize{
+  max-width: 50%;
+  margin: 0 auto;
+}
+
 
 @media only screen and (max-width: 768px) {
   .theActualNav{
     display: none;
   }
 
+  .flexTakeawayDetails{
+    display: flex;
+    flex-direction: column;
+  }
+
   .flexTheHeader{
     width: 100%;
+  }
+
+  .hrForMobileToNotShow{
+    display: none;
+  }
+
+  .footer nav{
+    display: none;
   }
 
   .navmenu{
@@ -489,8 +507,9 @@ a > .rating > span:last-child {
 .cart {
   display: flex;
   flex-direction: column;
-  margin: 1rem;
-  align-items: flex-start;
+  margin: 1rem auto; 
+  align-items: center;
+  justify-items: center;
   min-height: 50rem;
   height: auto;
 }

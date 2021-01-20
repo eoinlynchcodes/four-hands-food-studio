@@ -1,21 +1,11 @@
 import React from "react";
-import rose from "../imagesByEoin/rose.jpeg";
-import margaux from "../imagesByEoin/margaux.jpeg";
-import roseintro from '../imagesByEoin/roseintro.jpeg';
+import margaux from "../imagesByEoin/margaux.jpg";
+import rose from '../imagesByEoin/rose.jpg';
 
 function About() {
   return (
     <section className="aboutContainer">
-      {/* <div className="vl"></div> */}
       <div>
-        {/* <div className="coloredBox violet">
-          <h2>About</h2>
-        </div>
-        <br/> */}
-        {/* <div className="abouttopImage">
-          <img src={roseintro} />
-        </div> */}
-
         <div className="aboutMainText">
           <p>
             4 Hands Food Studio are producers of naturally fermented foods and
@@ -42,7 +32,7 @@ function About() {
         </div>
         <div id="straightenOutRose" className="flexRoseAndMargaux">
           <div className="blackBackgroundAbout">
-            <img src={rose} />
+            <img src={rose} alt="Rose Greene, Co-Founder of 4 hands foods tudio" />
             <p>
               <u>Rose Greene</u>
             </p>
@@ -100,7 +90,7 @@ function About() {
           </div>
 
           <div className="blackBackgroundAbout">
-            <img src={margaux} />
+            <img src={margaux}  alt=" Margaux Dejardin. Co-founder of 4 Hands Food Studio" />
             <p>
               <u>Margaux Dejardin</u>
             </p>
@@ -169,7 +159,6 @@ function About() {
             </div>
           </section>
       </div>
-      {/* <div className="vl"></div> */}
     </section>
   );
 }

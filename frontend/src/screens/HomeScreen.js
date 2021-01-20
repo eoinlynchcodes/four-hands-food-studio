@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { listProducts } from "../actions/productActions";
 import { listTopSellers } from "../actions/userActions";
 
-import fourhandshome from '../imagesByEoin/fourhandshome.png';
+import homeimage from '../imagesByEoin/homeimage.JPG';
 
 export default function HomeScreen(props) {
   const dispatch = useDispatch();
@@ -33,7 +33,7 @@ export default function HomeScreen(props) {
     <div>
             <div className="homeImages">
         <div className="homepageContainer">
-          <img src={fourhandshome} alt="4 Hands Food Studio's Food" />
+          <img className="homeImageToSize" src={homeimage} alt="4 Hands Food Studio's Food" />
         </div>
       </div>
 

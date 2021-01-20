@@ -1,7 +1,4 @@
 import React from "react";
-import rose from "../imagesByEoin/rose.jpeg";
-import margaux from "../imagesByEoin/margaux.jpeg";
-import roseintro from "../imagesByEoin/roseintro.jpeg";
 
 function Events() {
   return (

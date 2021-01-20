@@ -27,23 +27,38 @@ function Navigation(props) {
   return (
     <div>
       <header className="flexTheHeader">
-        <div className="navmenu">
           {userInfo && userInfo.isAdmin ? (
-            <Link className="spacebetween" to="/orderlist">
-              Orders
+            <div className="navmenu">
+              <Link className="spacebetween" to="/orderlist">
+                Orders
+              </Link>
+
+              <Link className="spacebetween" to="/edittakeaway">
+                Takeaway
+              </Link>
+              <Link className="spacebetween" to="/productlist">
+                Shop
+              </Link>
+              <Link
+              className="spacebetween"
+              to="#signout"
+              onClick={signoutHandler}
+            >
+              Sign Out
             </Link>
+            </div>
           ) : null}
-           {userInfo && userInfo.isAdmin ? (
+          {/* {userInfo && userInfo.isAdmin ? (
             <Link className="spacebetween" to="/edittakeaway">
-            Takeaway
-          </Link>
+              Takeaway
+            </Link>
           ) : null}
           {userInfo && userInfo.isAdmin ? (
             <Link className="spacebetween" to="/productlist">
-            Shop
-          </Link>
-          ) : null}
-          {userInfo ? (
+              Shop
+            </Link>
+          ) : null} */}
+          {/* {userInfo ? (
             <Link
               className="spacebetween"
               to="#signout"
@@ -51,8 +66,7 @@ function Navigation(props) {
             >
               Sign Out
             </Link>
-          ) : null}
-        </div>
+          ) : null} */}
         <div className="header">
           <div id="noMargin" className="brand burgerMenu">
             <button onClick={openMenu}>&#9776;</button>
@@ -66,15 +80,17 @@ function Navigation(props) {
             </Link>
           </div>
 
-            <Link className="" to="/cart/:id?">
-              <h5 className="black-text">
-                {cart.cartItems.length ? (
-                  <h5>CART ( {cart.cartItems.length} ) </h5>
-                ) : 'CART' }{" "}
-              </h5>
-            </Link>
+          <Link className="" to="/cart/:id?">
+            <h5 className="black-text">
+              {cart.cartItems.length ? (
+                <h5>CART ( {cart.cartItems.length} ) </h5>
+              ) : (
+                "CART"
+              )}{" "}
+            </h5>
+          </Link>
         </div>
-        <hr />
+        <hr className="hrForMobileToNotShow" />
 
         <div className="theActualNav">
           <Link to="/">
@@ -109,13 +125,27 @@ function Navigation(props) {
         </button>
         <ul className="categories">
           <li>
-            <Link to="/" onClick={closeMenu}>Home</Link>
-            <Link to="/about" onClick={closeMenu}>About</Link>
-            <Link to="/shop" onClick={closeMenu}>Shop</Link>
-            <Link to="/takeaway" onClick={closeMenu}>Takeaway</Link>
-            <Link to="/events" onClick={closeMenu}>Events</Link>
-            <Link to="/stockists" onClick={closeMenu} >Stockists</Link>
-            <Link to="/contact" onClick={closeMenu}>Contact</Link>
+            <Link to="/" onClick={closeMenu}>
+              Home
+            </Link>
+            <Link to="/about" onClick={closeMenu}>
+              About
+            </Link>
+            <Link to="/shop" onClick={closeMenu}>
+              Shop
+            </Link>
+            <Link to="/takeaway" onClick={closeMenu}>
+              Takeaway
+            </Link>
+            <Link to="/events" onClick={closeMenu}>
+              Events
+            </Link>
+            <Link to="/stockists" onClick={closeMenu}>
+              Stockists
+            </Link>
+            <Link to="/contact" onClick={closeMenu}>
+              Contact
+            </Link>
           </li>
         </ul>
       </aside>
