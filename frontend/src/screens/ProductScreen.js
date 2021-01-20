@@ -60,7 +60,7 @@ export default function ProductScreen(props) {
             <div className="product-front-and-center">
               <div className="details-info">
                 <div className="">
-                  <img src={product.image} alt="product"></img>
+                  <img className="product-image-to-fit" src={product.image} alt="product"></img>
                   <hr />
                 </div>
                 <div className="data-on-product">

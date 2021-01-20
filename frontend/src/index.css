@@ -930,3 +930,8 @@ img.small {
   display: flex;
   justify-content: space-evenly;
 }
+
+
+.product-image-to-fit{
+  max-width: 100%;
+}
