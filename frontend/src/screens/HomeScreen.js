@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import { useHistory } from 'react-router-dom';
-import '../sectionsByEoin/Homepage.css';
+import { useHistory } from "react-router-dom";
+import "../sectionsByEoin/Homepage.css";
 import { useDispatch } from "react-redux";
 import { listProducts } from "../actions/productActions";
 import { listTopSellers } from "../actions/userActions";
-
-import homeimage from '../imagesByEoin/homeimage.JPG';
+import { Link } from 'react-router-dom';
+import homeimage from "../imagesByEoin/homeimage.JPG";
 
 export default function HomeScreen(props) {
   const dispatch = useDispatch();
@@ -19,7 +19,6 @@ export default function HomeScreen(props) {
     dispatch(listTopSellers());
   }, [dispatch]);
 
-
   const buyTakeAway = (e) => {
     history.push("/takeaway");
   };
@@ -28,44 +27,53 @@ export default function HomeScreen(props) {
     history.push("/shop");
   };
 
-
   return (
     <div>
-            <div className="homeImages">
+      <div className="homeImages">
         <div className="homepageContainer">
-          <img className="homeImageToSize" src={homeimage} alt="4 Hands Food Studio's Food" />
+          <img
+            className="homeImageToSize"
+            src={homeimage}
+            alt="4 Hands Food Studio's Food"
+          />
         </div>
       </div>
 
       <div className="homepageContainer">
         <div>
           <div className="homepageFirstPiece">
-          <div id="thisOneVL"></div>
+            <div id="thisOneVL"></div>
 
             <section className="first homepageSection">
               <div className="violet">
                 <h3>The Fermented Goods</h3>
               </div>
               <p className="paraforalignment">
-                We currently offer a range of fermented vegetables and
-                drinks such as sauerkraut, kimchi and kombucha aswell as
-                fermented vegetable juices, raw apple vinegar, and sprouted whole foods.
-                <br />
-                We focus on a starting point: the raw produce.<br/><br/>
-                The ingredients we use have to be alive, chemical free and
-                ethically produced.
-                <br />              
-                We sell in <a className="linkToNormalise" href="/shop/#stockists"><u> shops</u></a>, through <a
-                  className="linkToNormalise"
-                  href="https://www.neighbourfood.ie/markets/" target="_blank"
-                >
-                  <u>Neighbourfood.ie</u>
-                </a> and our  {" "}  
-                 <a className="linkToNormalise" href="/shop"> 
-                    <u>Online Store. </u>
-                </a>
+                We currently offer a range of sauerkraut, kimchi, kombucha,
+                probiotic juice, raw apple vinegar, and sprouted whole foods. We
+                focus on a starting point: the raw produce. The ingredients we
+                use have to be alive, chemical free and ethically produced.
+                <br/>
+                We sell in{" "}
+                <Link className="linkToNormalise" to="/stockists">
+                  <u> selected stores</u>
+                </Link>
+                , through{" "}
+                <Link className="linkToNormalise"
+                  to="https://www.neighbourfood.ie/markets/"
+                  target="_blank"
+                ><u>Neighbourfood.ie</u>
+                </Link>{" "}
+                and our{" "}
+                <Link className="linkToNormalise" href="/shop">
+                  <u>Online Store. </u>
+                </Link>
               </p>
-              <div id="orangeButton" className="redButton" onClick={goToProducts}>
+              <div
+                id="orangeButton"
+                className="redButton"
+                onClick={goToProducts}
+              >
                 <p>
                   <b>CHECK OUT HERE</b>
                 </p>
@@ -75,7 +83,7 @@ export default function HomeScreen(props) {
             <div id="thisOneVL"></div>
 
             <section className="second homepageSection">
-              <div  className="green">
+              <div className="green">
                 <h3>TAKE-AWAY Dinner</h3>
               </div>
               <p id="centeringTakeaway" className="paraforalignment">
@@ -92,9 +100,8 @@ export default function HomeScreen(props) {
             </section>
             <div id="thisOneVL"></div>
           </div>
-
-          </div>
-          </div>
-          </div>
+        </div>
+      </div>
+    </div>
   );
 }
