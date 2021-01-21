@@ -4,9 +4,9 @@ function Blog() {
   return (
       <section className="aboutContainer">
         <section className="principlesbox">
-          <div id="principles" className="white">
+          <div id="" className="">
             <hr />
-            <p>Foxes Fruit and Veg Mullingar, Westmeath</p>
+            <p><b>Foxes Fruit and Veg</b> Mullingar, Westmeath</p>
             <hr />
             <p>Nuts and Grains Mullingar, Westmeath</p>
             <hr />
