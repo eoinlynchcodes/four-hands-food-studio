@@ -58,7 +58,7 @@ export default function OrderListScreen(props) {
               <tr key={order._id}>
                 {console.log(order.user)}
                 <td>{order.shippingAddress.fullName}</td>
-                <td> {order.shippingAddress.emailAddress} </td>
+                <td>{order.shippingAddress.phonenumber}<br/>{order.shippingAddress.emailAddress} </td>
                 <td>{order.createdAt.substring(0, 10)}</td>
                 <td>{order.totalPrice.toFixed(2)}</td>
                 <td>{order.isPaid ? order.paidAt.substring(0, 10) : "No"}</td>

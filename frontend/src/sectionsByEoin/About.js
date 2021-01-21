@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import margaux from "../imagesByEoin/margaux.jpg";
 import rose from '../imagesByEoin/rose.jpg';
 
 function About() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
+
   return (
     <section className="aboutContainer">
       <div>

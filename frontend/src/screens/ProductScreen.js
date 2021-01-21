@@ -22,6 +22,7 @@ export default function ProductScreen(props) {
   const [comment, setComment] = useState("");
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (successReviewCreate) {
       window.alert("Review Submitted Successfully");
       setRating("");
@@ -30,6 +31,9 @@ export default function ProductScreen(props) {
     }
     dispatch(detailsProduct(productId));
   }, [dispatch, productId, successReviewCreate]);
+  
+
+
   const addToCartHandler = () => {
     props.history.push(`/cart/${productId}?qty=${qty}`);
   };

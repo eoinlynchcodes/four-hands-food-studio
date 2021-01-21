@@ -9,8 +9,8 @@ export default function ShippingAddressScreen(props) {
   const { userInfo } = userSignin;
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
-  const userAddressMap = useSelector((state) => state.userAddressMap);
-  const { address: addressMap } = userAddressMap;
+  // const userAddressMap = useSelector((state) => state.userAddressMap);
+  // const { address: addressMap } = userAddressMap;
 
   if (!userInfo) {
     props.history.push("/signin");
@@ -19,6 +19,7 @@ export default function ShippingAddressScreen(props) {
   const [paymentMethod, setPaymentMethod] = useState("PayPal");
   const [emailAddress, setEmailAddress] = useState(shippingAddress.emailAddress);
   const [fullName, setFullName] = useState(shippingAddress.fullName);
+  const [phonenumber, setPhonenumber] = useState(shippingAddress.phonenumber);
   const [address, setAddress] = useState(shippingAddress.address);
   const [city, setCity] = useState(shippingAddress.city);
   const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
@@ -32,6 +33,7 @@ export default function ShippingAddressScreen(props) {
       saveShippingAddress({
         emailAddress,
         fullName,
+        phonenumber,
         address,
         city,
         postalCode,
@@ -76,6 +78,17 @@ export default function ShippingAddressScreen(props) {
                 value={emailAddress}
                 onChange={(e) => setEmailAddress(e.target.value)}
                 required
+              ></input>
+            </li>
+
+            <li>
+              <label htmlFor="phonenumber">Phone Number:</label>
+              <input
+                type="text"
+                name="phonenumber"
+                id="phonenumber"
+                value={phonenumber}
+                onChange={(e) => setPhonenumber(e.target.value)}
               ></input>
             </li>
 

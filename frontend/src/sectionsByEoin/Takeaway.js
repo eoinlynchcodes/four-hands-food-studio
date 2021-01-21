@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TakeawayContainer from "./TakeawayContainer";
 import takeawaypicture from "../imagesByEoin/takeawaypicture.png";
 import { Link } from 'react-router-dom';
 
 function Takeaway() {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
   
   return (
     <section className="aboutContainer">

@@ -12,7 +12,7 @@ function Shop(props) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(listProducts(category));
-
+    window.scrollTo(0, 0)
     return () => {
       //
     };
