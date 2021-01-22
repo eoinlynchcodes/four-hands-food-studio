@@ -37,7 +37,7 @@ function About() {
         </div>
         <div id="straightenOutRose" className="flexRoseAndMargaux">
           <div className="blackBackgroundAbout">
-            <img src={rose} alt="Rose Greene, Co-Founder of 4 hands foods tudio" />
+            <img className="roseAndMargauxImageonAbout" src={rose} alt="Rose Greene, Co-Founder of 4 hands foods tudio" />
             <p>
               <u>Rose Greene</u>
             </p>

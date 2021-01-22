@@ -4,7 +4,7 @@ import "../sectionsByEoin/Homepage.css";
 import { useDispatch } from "react-redux";
 import { listProducts } from "../actions/productActions";
 import { listTopSellers } from "../actions/userActions";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import homeimage from "../imagesByEoin/homeimage.JPG";
 
 export default function HomeScreen(props) {
@@ -51,18 +51,21 @@ export default function HomeScreen(props) {
               <p className="paraforalignment">
                 We currently offer a range of sauerkraut, kimchi, kombucha,
                 probiotic juice, raw apple vinegar, and sprouted whole foods. We
-                focus on a starting point: the raw produce. The ingredients we
-                use have to be alive, chemical free and ethically produced.
+                focus on a starting point: the raw produce.
+                <br />
+                The ingredients we use have to be alive, chemical free and ethically produced.
                 <br/>
                 We sell in{" "}
                 <Link className="linkToNormalise" to="/stockists">
                   <u> selected stores</u>
                 </Link>
                 , through{" "}
-                <Link className="linkToNormalise"
+                <Link
+                  className="linkToNormalise"
                   to="https://www.neighbourfood.ie/markets/"
                   target="_blank"
-                ><u>Neighbourfood.ie</u>
+                >
+                  <u>Neighbourfood.ie</u>
                 </Link>{" "}
                 and our{" "}
                 <Link className="linkToNormalise" href="/shop">
