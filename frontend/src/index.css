@@ -107,6 +107,10 @@ button {
     display: none;
   }
 
+  .blackBackgroundAbout{
+    width: 100%;
+  }
+
   .flexTakeawayDetails{
     display: flex;
     flex-direction: column;
@@ -957,4 +961,9 @@ img.small {
 
 .stockists{
   margin: 3rem auto;
+}
+
+.roseAndMargauxImageonAbout{
+  display: flex;
+  width: 100%;
 }

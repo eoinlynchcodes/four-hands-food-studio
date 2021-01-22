@@ -95,7 +95,7 @@ function About() {
           </div>
 
           <div className="blackBackgroundAbout">
-            <img src={margaux}  alt=" Margaux Dejardin. Co-founder of 4 Hands Food Studio" />
+            <img className="roseAndMargauxImageonAbout" src={margaux}  alt="Margaux Dejardin. Co-founder of 4 Hands Food Studio" />
             <p>
               <u>Margaux Dejardin</u>
             </p>

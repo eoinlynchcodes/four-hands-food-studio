@@ -71,18 +71,18 @@ html {
     flex-direction: column;
   }
   .aboutText{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
 
   .blackBackgroundAbout{
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
   }
 
   .blackBackgroundAbout img{
     margin: 0 auto;
-    width: 100%;
+    max-width: 100%;
   }
 
   #straightenOutRose{
@@ -401,7 +401,6 @@ html {
   justify-content: space-evenly;
 }
 
-
 .aboutText{
 flex-basis: 50%;
 }
@@ -457,6 +456,10 @@ flex-basis: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.blackBackgroundAbout{
+  width: 50%;
 }
 
 
