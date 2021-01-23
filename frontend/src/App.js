@@ -21,7 +21,7 @@ import UserEditScreen from "./screens/UserEditScreen";
 import SellerRoute from "./components/SellerRoute";
 import SellerScreen from "./screens/SellerScreen";
 import SearchScreen from "./screens/SearchScreen";
-import MapScreen from "./screens/MapScreen";
+// import MapScreen from "./screens/MapScreen";
 import Navigation from "./components/Navigation";
 import Footer from "./sectionsByEoin/Footer";
 import About from "./sectionsByEoin/About";
@@ -62,6 +62,7 @@ function App() {
             <Route path="/shops" component={Shops}>
               {" "}
             </Route>
+            {/* <Route path="/signout" component={SignoutFunction}> </Route> */}
             <Route path="/register" component={RegisterScreen}></Route>
             <Route path="/edittakeaway" component={EditTakeaway}></Route>
             <Route path="/shipping" component={ShippingAddressScreen}></Route>
@@ -88,7 +89,7 @@ function App() {
               path="/profile"
               component={ProfileScreen}
             ></PrivateRoute>
-            <PrivateRoute path="/map" component={MapScreen}></PrivateRoute>
+            {/* <PrivateRoute path="/map" component={MapScreen}></PrivateRoute> */}
             <AdminRoute
               path="/productlist"
               component={ProductListScreen}
