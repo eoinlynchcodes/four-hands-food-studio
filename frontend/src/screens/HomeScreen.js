@@ -50,9 +50,9 @@ export default function HomeScreen(props) {
               </div>
               <p className="paraforalignment">
                 We currently offer a range of sauerkraut, kimchi, kombucha,
-                probiotic juice, raw apple vinegar, and sprouted whole foods. We
+                probiotic juice, raw apple vinegar, and sprouted whole foods.<br/> We
                 focus on a starting point: the raw produce.
-                <br />
+                <br /><br />
                 The ingredients we use have to be alive, chemical free and ethically produced.
                 <br/>
                 We sell in{" "}
