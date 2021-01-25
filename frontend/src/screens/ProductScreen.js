@@ -34,19 +34,19 @@ export default function ProductScreen(props) {
   
 
 
-  const addToCartHandler = () => {
-    props.history.push(`/cart/${productId}?qty=${qty}`);
-  };
-  const submitHandler = (e) => {
-    e.preventDefault();
-    if (comment && rating) {
-      dispatch(
-        createReview(productId, { rating, comment, name: userInfo.name })
-      );
-    } else {
-      alert("Please enter comment and rating");
-    }
-  };
+  // const addToCartHandler = () => {
+  //   props.history.push(`/cart/${productId}?qty=${qty}`);
+  // };
+  // const submitHandler = (e) => {
+  //   e.preventDefault();
+  //   if (comment && rating) {
+  //     dispatch(
+  //       createReview(productId, { rating, comment, name: userInfo.name })
+  //     );
+  //   } else {
+  //     alert("Please enter comment and rating");
+  //   }
+  // };
 
   const handleAddToCart = () => {
     props.history.push("/cart/" + props.match.params.id + "?qty=" + qty);

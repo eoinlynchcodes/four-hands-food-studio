@@ -993,3 +993,20 @@ img.small {
   display: flex;
   width: 100%;
 }
+
+.flextakeaway{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0rem;
+}
+
+.flextakeaway img{
+  max-width: 50%;
+}
+
+.flextakeaway p{
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
