@@ -913,6 +913,10 @@ img.small {
   width: 2rem;
 }
 
+.linebreaks{
+  white-space: pre-line;
+}
+
 #products{
   width: 90%;
   display: flex;

@@ -47,7 +47,7 @@ function TakeawayContainer(props) {
             <br /> {detailsOnline.collectionDate}
           </p>
 
-          <p>
+          <p className="linebreaks" >
             <u>Collection Point:</u>
             <br /> {detailsOnline.pickupPoints}
           </p>
