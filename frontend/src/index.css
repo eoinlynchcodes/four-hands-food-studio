@@ -101,6 +101,10 @@ button {
   margin: 0 auto;
 }
 
+#blackText{
+  color: black;
+}
+
 
 @media only screen and (max-width: 768px) {
   .theActualNav{

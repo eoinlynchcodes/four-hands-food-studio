@@ -40,9 +40,14 @@ export default function CartScreen(props) {
             {cartItems.length === 0 ? (
               <div>
                 <h2>Cart is Empty</h2>
-                <Link to="/shop"><button  id="greenButton" className="greenButtonLight checkout">
-                 Go To Products
-                </button></Link>
+                <Link to="/shop">
+                  <button
+                    id="greenButton"
+                    className="greenButtonLight checkout"
+                  >
+                    Go To Products
+                  </button>
+                </Link>
               </div>
             ) : (
               <button
@@ -54,6 +59,17 @@ export default function CartScreen(props) {
                 Checkout
               </button>
             )}
+          </li>
+
+          <li>
+            <button
+              onClick={checkoutHandler}
+              id="blackText"
+              className="checkout"
+              disabled={cartItems.length === 0}
+            >
+              <Link to="/shop">Shop for More?</Link>
+            </button>
           </li>
 
           {cartItems.length === 0
@@ -115,6 +131,16 @@ export default function CartScreen(props) {
                 Checkout
               </button>
             )}
+          </li>
+          <li>
+            <button
+              onClick={checkoutHandler}
+              id="blackText"
+              className="checkout"
+              disabled={cartItems.length === 0}
+            >
+              <Link to="/shop">Shop for More?</Link>
+            </button>
           </li>
         </ul>
 
