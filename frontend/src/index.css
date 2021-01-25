@@ -318,6 +318,8 @@ a:hover {
   border-radius: 20px;
   padding: 2em 2em;
   margin: 0 auto;
+  width: 90%;
+  text-align: center;
 }
 
 .product {
@@ -994,19 +996,34 @@ img.small {
   width: 100%;
 }
 
+.takeawayImage{
+  max-width: 40%;
+}
+
 .flextakeaway{
   display: flex;
   justify-content: space-evenly;
   padding: 2rem 0rem;
-}
-
-.flextakeaway img{
-  max-width: 50%;
-}
-
-.flextakeaway p{
-  padding: 2rem 2rem;
-  display: flex;
-  justify-content: center;
   align-items: center;
+}
+
+.takeawayText{
+  width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  .flextakeaway{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .takeawayImage{
+    max-width: 100%;
+  }
+
+  .takeawayText{
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0rem;
+  }
 }

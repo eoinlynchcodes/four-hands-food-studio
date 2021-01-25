@@ -17,11 +17,11 @@ function Takeaway() {
         </div> */}
         <br />
 
-        <div className=" homeImages">
-          <div className="homepageContainer">
+        <div className="">
+          <div className="">
             <div className="flextakeaway">
-              <img src={veggietakeaway} alt="An image of fermented food" />
-              <p className="aboutMainText">
+              <img className="takeawayImage" src={veggietakeaway} alt="An image of fermented food" />
+              <p className="takeawayText">
                 Nourishing, sustainable, tasty ready-to-go meal to enjoy with
                 your loved ones in the comfort of your own home.
                 <br />
