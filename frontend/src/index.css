@@ -934,6 +934,12 @@ img.small {
   justify-content: center;
 }
 
+.centerThis{
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0rem;
+}
+
 .centerThisUL{
   width: 90%;
   margin: 0 auto;
