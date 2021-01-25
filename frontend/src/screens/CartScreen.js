@@ -13,7 +13,7 @@ export default function CartScreen(props) {
   const { cartItems } = cart;
   const dispatch = useDispatch();
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
 
     if (productId) {
       dispatch(addToCart(productId, qty));
@@ -29,7 +29,6 @@ export default function CartScreen(props) {
     props.history.push("/signin?redirect=shipping");
   };
   return (
-
     <section>
       {/* <Navigation /> */}
       <div className="cart">
@@ -38,69 +37,66 @@ export default function CartScreen(props) {
             <h3>Shopping Cart</h3>
           </li>
           <li>
-            <button
-              onClick={checkoutHandler}
-              id="greenButton"
-              className="checkout"
-              disabled={cartItems.length === 0}
-            >
-              Checkout
-            </button>
+            {cartItems.length === 0 ? (
+              <div>
+                <h2>Cart is Empty</h2>
+                <Link to="/shop"><button  id="greenButton" className="checkout">
+                 Go To Products
+                </button></Link>
+              </div>
+            ) : (
+              <button
+                onClick={checkoutHandler}
+                id="greenButton"
+                className="checkout"
+                disabled={cartItems.length === 0}
+              >
+                Checkout
+              </button>
+            )}
           </li>
 
-          {cartItems.length === 0 ? (
-            <div>
-              <h4>Cart is Empty</h4>
-              <div className="see-products-button">
-                <Link to="/">
-                  <h4 className="see-products">
-                    <u>Go to Products</u>
-                  </h4>
-                </Link>
-              </div>
-            </div>
-          ) : (
-            cartItems.map((item) => (
-              <li>
-                <div className="cart-image">
-                  <img src={item.image} alt="product image"/>
-                </div>
-                <div className="cart-name">
-                  <div>
-                    <Link
-                      to={"/product/" + item.product}
-                      className="black-text"
-                    >
-                      {item.name}
-                    </Link>
+          {cartItems.length === 0
+            ? null
+            : cartItems.map((item) => (
+                <li>
+                  <div className="cart-image">
+                    <img src={item.image} alt="product image" />
                   </div>
-                  <p className="">€{item.price}</p>
+                  <div className="cart-name">
+                    <div>
+                      <Link
+                        to={"/product/" + item.product}
+                        className="black-text"
+                      >
+                        {item.name}
+                      </Link>
+                    </div>
+                    <p className="">€{item.price}</p>
 
-                  <select
-                    className="qtywidth"
-                    value={item.qty}
-                    onChange={(e) =>
-                      dispatch(addToCart(item.product, e.target.value))
-                    }
-                  >
-                    {[...Array(item.countInStock).keys()].map((x) => (
-                      <option key={x + 1} value={x + 1}>
-                        {x + 1}
-                      </option>
-                    ))}
-                  </select>
-                  <p
-                    type="button"
-                    className=""
-                    onClick={() => removeFromCartHandler(item.product)}
-                  >
-                    <u>Delete</u>
-                  </p>
-                </div>
-
-              </li>
-            ))
-          )}
+                    <select
+                      className="qtywidth"
+                      value={item.qty}
+                      onChange={(e) =>
+                        dispatch(addToCart(item.product, e.target.value))
+                      }
+                    >
+                      {[...Array(item.countInStock).keys()].map((x) => (
+                        <option key={x + 1} value={x + 1}>
+                          {x + 1}
+                        </option>
+                      ))}
+                    </select>
+                    <p
+                      type="button"
+                      className=""
+                      onClick={() => removeFromCartHandler(item.product)}
+                    >
+                      <u>Delete</u>
+                    </p>
+                  </div>
+                </li>
+              ))}
           <li>
             <p>
               Total
@@ -109,14 +105,16 @@ export default function CartScreen(props) {
             </p>
           </li>
           <li>
-            <button
-              onClick={checkoutHandler}
-              id="greenButton"
-              className="checkout"
-              disabled={cartItems.length === 0}
-            >
-              Checkout
-            </button>
+            {cartItems.length === 0 ? null : (
+              <button
+                onClick={checkoutHandler}
+                id="greenButton"
+                className="checkout"
+                disabled={cartItems.length === 0}
+              >
+                Checkout
+              </button>
+            )}
           </li>
         </ul>
 

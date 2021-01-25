@@ -69,7 +69,7 @@ function Shop(props) {
                         </div>
 
                         <div className="buttonDivHomepageProduct">
-                          <div className="button primary fifty">More Info</div>
+                          <div className="button primary fifty">Curious?</div>
                           {product.countInStock > 0 ? (
                             <div
                               onClick={(product) => handleAddToCart(product)}
@@ -81,7 +81,7 @@ function Shop(props) {
                           ) : (
                             <div className="">
                               <a href="#contact" className="whitetext">
-                                Email Us For Orders
+                                Out of Stock
                               </a>
                             </div>
                           )}
