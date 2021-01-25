@@ -441,6 +441,10 @@ flex-basis: 50%;
   flex-direction: row;
 }
 
+.orangeButton{
+  background-color: #f4c1a8;
+}
+
 .paraforalignment{
   text-align: center;
   height: auto;

@@ -510,6 +510,11 @@ a > .rating > span:last-child {
 .text-center {
   text-align: center;
 }
+
+.greenButtonLight {
+  background-color: #718279;
+  color: white;
+}
 /* Cart */
 
 .cart {
@@ -882,7 +887,6 @@ img.small {
 }
 
 .checkout{
-  background-color: green;
   padding: 1rem 2rem;
   display: inline;
   width: 100%;

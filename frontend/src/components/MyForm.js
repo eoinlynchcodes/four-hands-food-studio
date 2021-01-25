@@ -57,7 +57,7 @@ export default class MyForm extends React.Component {
           ) : (
             <input
               type="submit"
-              className="button primary"
+              className="button orangeButton"
               value="Send Message"
             />
           )}
