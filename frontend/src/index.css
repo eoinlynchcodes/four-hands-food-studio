@@ -107,6 +107,10 @@ button {
     display: none;
   }
 
+  .homeImageToSize{
+    max-width: 100%;
+  }
+
   .blackBackgroundAbout{
     width: 100%;
   }
