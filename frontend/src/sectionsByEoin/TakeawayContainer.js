@@ -41,7 +41,7 @@ function TakeawayContainer(props) {
     <div className="menuTakeawaySection">
       <div>
         <h2 className="violet">This week's takeaway menu:</h2>
-        <div className="flexTakeawayDetails" >
+        <div className="flexTakeawayDetails">
           <p>
             <u>Collection Date:</u>
             <br /> {detailsOnline.collectionDate}
@@ -53,9 +53,48 @@ function TakeawayContainer(props) {
           </p>
         </div>
 
-        <p>** {detailsOnline.otherinfo}</p>
+        <p>{detailsOnline.otherinfo}</p>
         <hr />
       </div>
+
+      {takeawayProduct.map((takeaway) => {
+        if (takeaway.category === "Snack") {
+          return (
+            <div>
+              <div>
+                <p className="yellowText">
+                  <u>{takeaway.category}</u>
+                </p>
+                <p>{takeaway.name}</p>
+                <p>{takeaway.description}</p>
+              </div>
+              <div>
+                <p>
+                  <u className="yellowText">{takeaway.courseTitle}</u>
+                  <p> {takeaway.courseText}</p>
+
+                  {takeaway.price ? <p>€{takeaway.price} </p> : null}
+                </p>
+              </div>
+              <div>
+                {takeaway.price ? (
+                  <div
+                    onClick={() => orderTakeaway(takeaway._id)}
+                    className="orderButton"
+                  >
+                    <b>
+                      <p>ORDER</p>
+                    </b>
+                  </div>
+                ) : null}
+              </div>
+              <hr />
+            </div>
+          );
+        } else {
+          return null;
+        }
+      })}
 
       {/* For Menu */}
       {takeawayProduct.map((takeaway) => {
@@ -74,11 +113,85 @@ function TakeawayContainer(props) {
                   <u className="yellowText">{takeaway.courseTitle}</u>
                   <p> {takeaway.courseText}</p>
 
-                  {takeaway.price ? (
-                    <p>
-                      <u>Price:</u> €{takeaway.price}{" "}
-                    </p>
-                  ) : null}
+                  {takeaway.price ? <p>€{takeaway.price} </p> : null}
+                </p>
+              </div>
+              <div>
+                {takeaway.price ? (
+                  <div
+                    onClick={() => orderTakeaway(takeaway._id)}
+                    className="orderButton"
+                  >
+                    <b>
+                      <p>ORDER</p>
+                    </b>
+                  </div>
+                ) : null}
+              </div>
+              <hr />
+            </div>
+          );
+        } else {
+          return null;
+        }
+      })}
+
+      {takeawayProduct.map((takeaway) => {
+        if (takeaway.category === "Special") {
+          return (
+            <div>
+              <div>
+                <p className="yellowText">
+                  <u>{takeaway.category}</u>
+                </p>
+                <p>{takeaway.name}</p>
+                <p>{takeaway.description}</p>
+              </div>
+              <div>
+                <p>
+                  <u className="yellowText">{takeaway.courseTitle}</u>
+                  <p> {takeaway.courseText}</p>
+
+                  {takeaway.price ? <p>€{takeaway.price} </p> : null}
+                </p>
+              </div>
+              <div>
+                {takeaway.price ? (
+                  <div
+                    onClick={() => orderTakeaway(takeaway._id)}
+                    className="orderButton"
+                  >
+                    <b>
+                      <p>ORDER</p>
+                    </b>
+                  </div>
+                ) : null}
+              </div>
+              <hr />
+            </div>
+          );
+        } else {
+          return null;
+        }
+      })}
+
+      {takeawayProduct.map((takeaway) => {
+        if (takeaway.category === "Cheese") {
+          return (
+            <div>
+              <div>
+                <p className="yellowText">
+                  <u>{takeaway.category}</u>
+                </p>
+                <p>{takeaway.name}</p>
+                <p>{takeaway.description}</p>
+              </div>
+              <div>
+                <p>
+                  <u className="yellowText">{takeaway.courseTitle}</u>
+                  <p> {takeaway.courseText}</p>
+
+                  {takeaway.price ? <p>€{takeaway.price} </p> : null}
                 </p>
               </div>
               <div>

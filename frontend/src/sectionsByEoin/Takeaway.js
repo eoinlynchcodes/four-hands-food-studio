@@ -22,8 +22,8 @@ function Takeaway() {
           <div className="homepageContainer">
             <img src={takeawaypicture} />
           </div>
-        <div className="aboutMainText">
-          <p>
+        <div>
+          <p className="aboutMainText" >
             Nourishing, sustainable, tasty ready-to-go meal to enjoy with your
             loved ones in the comfort of your own home.
             <br />
@@ -41,6 +41,7 @@ function Takeaway() {
           <Link to="/shop"><div className="ProductsFromMenu">
             Shop Products
           </div></Link>
+          <br/>
         </div>
         </div>
       </div>
