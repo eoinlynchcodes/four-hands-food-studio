@@ -53,7 +53,7 @@ export default function ProductScreen(props) {
   };
 
   return (
-    <div>
+    <div className="linebreaks">
       {loading ? (
         <div>Loading...</div>
       ) : error ? (

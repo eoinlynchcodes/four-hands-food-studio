@@ -38,7 +38,7 @@ function TakeawayContainer(props) {
   };
 
   return (
-    <div className="menuTakeawaySection">
+    <div className="menuTakeawaySection linebreaks">
       <div>
         <h2 className="violet">This week's takeaway menu:</h2>
         <div className="flexTakeawayDetails">
@@ -47,7 +47,7 @@ function TakeawayContainer(props) {
             <br /> {detailsOnline.collectionDate}
           </p>
 
-          <p className="linebreaks" >
+          <p className="" >
             <u>Collection Point:</u>
             <br /> {detailsOnline.pickupPoints}
           </p>
