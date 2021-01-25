@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 import takeawaypicture from "../imagesByEoin/takeawaypicture.png";
+import { useHistory } from "react-router-dom";
 
 export default function CartScreen(props) {
   const productId = props.match.params.id;
@@ -12,6 +13,7 @@ export default function CartScreen(props) {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
   const dispatch = useDispatch();
+  const history = useHistory();
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -23,6 +25,10 @@ export default function CartScreen(props) {
   const removeFromCartHandler = (id) => {
     // delete action
     dispatch(removeFromCart(id));
+  };
+
+  const goToShop = () => {
+    history.push("/shop");
   };
 
   const checkoutHandler = () => {
@@ -63,12 +69,12 @@ export default function CartScreen(props) {
 
           <li>
             <button
-              onClick={checkoutHandler}
+              onClick={goToShop}
               id="blackText"
               className="checkout"
               disabled={cartItems.length === 0}
             >
-              <Link to="/shop">Shop for More?</Link>
+              Shop for More?
             </button>
           </li>
 
@@ -134,12 +140,12 @@ export default function CartScreen(props) {
           </li>
           <li>
             <button
-              onClick={checkoutHandler}
+              onClick={goToShop}
               id="blackText"
               className="checkout"
               disabled={cartItems.length === 0}
             >
-              <Link to="/shop">Shop for More?</Link>
+              Shop for More?
             </button>
           </li>
         </ul>
