@@ -49,7 +49,7 @@ export default function CartScreen(props) {
                 <Link to="/shop">
                   <button
                     id="greenButton"
-                    className="greenButtonLight checkout"
+                    className="greenButtonLight checkout cursorPointer"
                   >
                     Go To Products
                   </button>
@@ -59,7 +59,7 @@ export default function CartScreen(props) {
               <button
                 onClick={checkoutHandler}
                 id="greenButton"
-                className="greenButtonLight checkout"
+                className="greenButtonLight checkout cursorPointer"
                 disabled={cartItems.length === 0}
               >
                 Checkout
@@ -71,7 +71,7 @@ export default function CartScreen(props) {
             <button
               onClick={goToShop}
               id="blackText"
-              className="checkout"
+              className="checkout cursorPointer"
               disabled={cartItems.length === 0}
             >
               Shop for More?
@@ -131,7 +131,7 @@ export default function CartScreen(props) {
               <button
                 onClick={checkoutHandler}
                 id="greenButton"
-                className="greenButtonLight checkout"
+                className="greenButtonLight checkout cursorPointer"
                 disabled={cartItems.length === 0}
               >
                 Checkout
@@ -142,7 +142,7 @@ export default function CartScreen(props) {
             <button
               onClick={goToShop}
               id="blackText"
-              className="checkout"
+              className="checkout cursorPointer"
               disabled={cartItems.length === 0}
             >
               Shop for More?

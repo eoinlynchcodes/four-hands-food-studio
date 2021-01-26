@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { listProducts } from "../actions/productActions";
 
+
 function Shop(props) {
   const [searchKeyword, setSearchKeyword] = useState("");
   const [sortOrder, setSortOrder] = useState("");
@@ -61,25 +62,25 @@ function Shop(props) {
                           >
                             {product.name}
                           </Link>
+                          {product.price ?<p> €{product.price}</p> : null}
                         </div>
 
                         <div className="product-price pad">
                           {" "}
-                          {product.price ? `€ ${product.price}` : null}
                         </div>
 
                         <div className="buttonDivHomepageProduct">
-                          <div className="button primary fifty">Curious?</div>
+                          <div className="button orangeButton fifty">Curious?</div>
                           {product.countInStock > 0 ? (
                             <div
                               onClick={(product) => handleAddToCart(product)}
                               id="greenButton"
-                              className="whitetext button fifty"
+                              className="greenButtonLight button"
                             >
                               Add to Cart
                             </div>
                           ) : (
-                            <div className="">
+                            <div className="whitetext blackButton button">
                               <a href="#contact" className="whitetext">
                                 Out of Stock
                               </a>
