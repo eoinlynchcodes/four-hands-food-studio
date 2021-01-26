@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { listProducts } from "../actions/productActions";
 
-
 function Shop(props) {
   const [searchKeyword, setSearchKeyword] = useState("");
   const [sortOrder, setSortOrder] = useState("");
@@ -13,7 +12,7 @@ function Shop(props) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(listProducts(category));
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
     return () => {
       //
     };
@@ -31,82 +30,78 @@ function Shop(props) {
   return (
     <section className="aboutContainer">
       {/* <div className="vl"></div> */}
-        {/* <div className="coloredBox violet">
+      {/* <div className="coloredBox violet">
           <h2>Products</h2>
         </div> */}
-        <br />
-        <div className="">
-          {/* <h1 id="products">Products</h1> */}
-          {loading ? (
-            <div>Loading...</div>
-          ) : error ? (
-            <div>{error}</div>
-          ) : (
-            <div id="products" className="">
-              {products.map((product) => (
-                <div className="product-padding-section" key={product._id}>
-                  {product ? (
-                    <div>
-                      <Link to={"/product/" + product._id}>
-                        <img
-                          className="product-image"
-                          src={product.image}
-                          alt="product"
-                        />
-                      </Link>
-                      <div className="product-data">
-                        <div className="product-name pad">
-                          <Link
-                            className="product-actual-name"
-                            to={"/product/" + product._id}
-                          >
-                            {product.name}
-                          </Link>
-                          {product.price ?<p> €{product.price}</p> : null}
-                        </div>
-
-                        <div className="product-price pad">
-                          {" "}
-                        </div>
-
-                        <div className="buttonDivHomepageProduct">
-                          <div className="button orangeButton fifty">Curious?</div>
-                          {product.countInStock > 0 ? (
-                            <div
-                              onClick={(product) => handleAddToCart(product)}
-                              id="greenButton"
-                              className="greenButtonLight button"
-                            >
-                              Add to Cart
-                            </div>
-                          ) : (
-                            <div className="whitetext blackButton button">
-                              <a href="#contact" className="whitetext">
-                                Out of Stock
-                              </a>
-                            </div>
-                          )}
-                        </div>
+      <br />
+      <div className="">
+        {/* <h1 id="products">Products</h1> */}
+        {loading ? (
+          <div>Loading...</div>
+        ) : error ? (
+          <div>{error}</div>
+        ) : (
+          <div id="products" className="">
+            {products.map((product) => (
+              <div className="product-padding-section" key={product._id}>
+                {product ? (
+                  <div>
+                    <Link to={"/product/" + product._id}>
+                      <img
+                        className="product-image"
+                        src={product.image}
+                        alt="product"
+                      />
+                    </Link>
+                    <div className="product-data">
+                      <div className="product-name pad">
+                        <Link
+                          className="product-actual-name"
+                          to={"/product/" + product._id}
+                        >
+                          {product.name}
+                        </Link>
+                        {product.price ? <p> €{product.price}</p> : null}
                       </div>
                     </div>
-                  ) : (
-                    <div>
-                      <h2>
-                        Products will soon be available for purchase here.
-                      </h2>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+                    <div className="buttonDivHomepageProduct">
+                        <div className="button orangeButton fifty">
+                          Curious?
+                        </div>
+                        {product.countInStock > 0 ? (
+                          <div
+                            onClick={(product) => handleAddToCart(product)}
+                            id="greenButton"
+                            className="greenButtonLight button"
+                          >
+                            Add to Cart
+                          </div>
+                        ) : (
+                          <div className="whitetext blackButton button">
+                            <a href="#contact" className="whitetext">
+                              Out of Stock
+                            </a>
+                          </div>
+                        )}
+                      </div>
+                      <br/>
+                  </div>
+                ) : (
+                  <div>
+                    <h2>Products will soon be available for purchase here.</h2>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
 
-        <br />
-        <hr/>
-        <br />
+      <br />
+      <hr />
+      <br />
 
-        {/* <section id="stockists" className="stockists">
+      {/* <section id="stockists" className="stockists">
           <div className="coloredBox violet">
             <h3>Stockists</h3>
           </div>
