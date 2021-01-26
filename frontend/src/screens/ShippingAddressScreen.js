@@ -16,6 +16,8 @@ export default function ShippingAddressScreen(props) {
     props.history.push("/signin");
   }
 
+  console.log(cart);
+
   const [paymentMethod, setPaymentMethod] = useState("PayPal");
   const [emailAddress, setEmailAddress] = useState(shippingAddress.emailAddress);
   const [fullName, setFullName] = useState(shippingAddress.fullName);

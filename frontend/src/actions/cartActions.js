@@ -12,13 +12,31 @@ export const addToCart = (productId, qty) => async (dispatch, getState) => {
   const {
     cart: { cartItems },
   } = getState();
-  if (cartItems.length > 0 && data.seller._id !== cartItems[0].seller._id) {
-    dispatch({
-      type: CART_ADD_ITEM_FAIL,
-      payload: `Can't Add To Cart. Buy only from ${cartItems[0].seller.seller.name} in this order`,
-    });
-  } else {
-    dispatch({
+  
+  // if (cartItems.length > 0 && data.seller._id !== cartItems[0].seller._id) {
+  //   dispatch({
+  //     type: CART_ADD_ITEM_FAIL,
+  //     payload: `Can't Add To Cart. Buy only from ${cartItems[0].seller.seller.name} in this order`,
+  //   });
+  // } else {
+  //   dispatch({
+  //     type: CART_ADD_ITEM,
+  //     payload: {
+  //       name: data.name,
+  //       image: data.image,
+  //       price: data.price,
+  //       countInStock: data.countInStock,
+  //       product: data._id,
+  //       category: data.category,
+  //       qty,
+  //     },
+  //   });
+  //   localStorage.setItem(
+  //     'cartItems',
+  //     JSON.stringify(getState().cart.cartItems)
+  //   );
+  // }
+      dispatch({
       type: CART_ADD_ITEM,
       payload: {
         name: data.name,
@@ -26,7 +44,7 @@ export const addToCart = (productId, qty) => async (dispatch, getState) => {
         price: data.price,
         countInStock: data.countInStock,
         product: data._id,
-        seller: data.seller,
+        category: data.category,
         qty,
       },
     });
@@ -34,7 +52,6 @@ export const addToCart = (productId, qty) => async (dispatch, getState) => {
       'cartItems',
       JSON.stringify(getState().cart.cartItems)
     );
-  }
 };
 
 export const removeFromCart = (productId) => (dispatch, getState) => {

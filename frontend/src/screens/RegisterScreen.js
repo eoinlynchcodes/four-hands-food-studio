@@ -33,7 +33,7 @@ export default function RegisterScreen(props) {
     }
   }, [props.history, redirect, userInfo]);
   return (
-    <div className="form" >
+    <div className="" >
       <form onSubmit={submitHandler}>
       <ul className="form-container">
         <li>
