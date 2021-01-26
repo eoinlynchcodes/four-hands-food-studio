@@ -12,11 +12,12 @@ export default function ShippingAddressScreen(props) {
   // const userAddressMap = useSelector((state) => state.userAddressMap);
   // const { address: addressMap } = userAddressMap;
 
+  console.log(cart);
+
   if (!userInfo) {
     props.history.push("/signin");
   }
 
-  console.log(cart);
 
   const [paymentMethod, setPaymentMethod] = useState("PayPal");
   const [emailAddress, setEmailAddress] = useState(shippingAddress.emailAddress);
