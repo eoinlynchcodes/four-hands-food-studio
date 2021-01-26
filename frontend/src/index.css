@@ -1039,3 +1039,12 @@ img.small {
     padding: 2rem 0rem;
   }
 }
+
+.containEventImages{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.containEventImages img{
+  width: 100%;
+}
