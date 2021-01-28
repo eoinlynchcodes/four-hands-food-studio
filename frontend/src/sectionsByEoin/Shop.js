@@ -64,27 +64,31 @@ function Shop(props) {
                         {product.price ? <p> €{product.price}</p> : null}
                       </div>
                     </div>
-                    <div className="buttonDivHomepageProduct">
-                        <div className="button orangeButton fifty">
-                          Curious?
+
+                    <div className="">
+                      <Link
+                        className=""
+                        to={"/product/" + product._id}
+                      >
+                        {" "}
+                        <div className="buttonDivHomepageProduct orangeButton">
+                          Curious?{" "}
                         </div>
-                        {product.countInStock > 0 ? (
-                          <div
-                            onClick={(product) => handleAddToCart(product)}
-                            id="greenButton"
-                            className="greenButtonLight button"
-                          >
-                            Add to Cart
-                          </div>
-                        ) : (
-                          <div className="whitetext blackButton button">
-                            <a href="#contact" className="whitetext">
-                              Out of Stock
-                            </a>
-                          </div>
-                        )}
-                      </div>
-                      <br/>
+                      </Link>
+                      {product.countInStock > 0 ? (
+                        <div
+                          onClick={(product) => handleAddToCart(product)}
+                          id="greenButton"
+                          className="greenButtonLight whitetext"
+                        >
+                          Add to Cart
+                        </div>
+                      ) : (
+                        <div className="whitetext blackButton">
+                          <a className="whitetext">Out of Stock</a>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 ) : (
                   <div>

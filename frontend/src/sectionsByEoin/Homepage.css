@@ -443,6 +443,10 @@ flex-basis: 50%;
 
 .orangeButton{
   background-color: #f4c1a8;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid grey;
 }
 
 .paraforalignment{
