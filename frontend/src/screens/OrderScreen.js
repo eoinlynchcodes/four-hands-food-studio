@@ -33,7 +33,6 @@ export default function OrderScreen(props) {
   } = orderDeliver;
   const dispatch = useDispatch();
   useEffect(() => {
-    window.scrollTo(0, 0);
     const addPayPalScript = async () => {
       const { data } = await Axios.get("/api/config/paypal");
       const script = document.createElement("script");
@@ -64,6 +63,7 @@ export default function OrderScreen(props) {
         }
       }
     }
+    window.scrollTo(0, 0);
   }, [dispatch, orderId, sdkReady, successPay, successDeliver, order]);
 
   const successPaymentHandler = (paymentResult) => {
