@@ -11,8 +11,7 @@ function TakeawayContainer(props) {
   const [detailsOnline, setDetailsOnline] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("/api/products/")
+    axios.get("/api/products/")
       .then((response) => {
         console.log(response.data.products);
         setTakeawayProduct(response.data.products);
@@ -23,8 +22,7 @@ function TakeawayContainer(props) {
   }, []);
 
   useEffect(() => {
-    axios
-      .get("/api/takeaway/")
+    axios.get("/api/takeaway/")
       .then((response) => {
         setDetailsOnline(response.data);
       })

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { listProducts } from "../actions/productActions";
 
@@ -10,6 +10,7 @@ function Shop(props) {
   const productList = useSelector((state) => state.productList);
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
+  const history = useHistory();
 
   useEffect(() => {
     dispatch(listProducts(category));
@@ -24,8 +25,8 @@ function Shop(props) {
     dispatch(listProducts(category, searchKeyword, sortOrder));
   };
 
-  const handleAddToCart = (product) => {
-    props.history.push("/cart/" + product._id + "?qty=" + 1);
+  const handleAddToCart = (id) => {
+    history.push("/cart/" + id);
   };
 
   return (
@@ -71,7 +72,7 @@ function Shop(props) {
                           </div>
                        </Link>
                           <div
-                            onClick={(product) => handleAddToCart(product)}
+                            onClick={() => handleAddToCart(product._id)}
                             className="greenButtonLight whitetext"
                           >
                             Add to Cart

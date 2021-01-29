@@ -23,12 +23,11 @@ export default function CartScreen(props) {
   }, [dispatch, productId, qty]);
 
   const removeFromCartHandler = (id) => {
-    // delete action
     dispatch(removeFromCart(id));
   };
 
   const goToShop = () => {
-    history.push("/shop");
+    history.push('/shop');
   };
 
   const checkoutHandler = () => {
