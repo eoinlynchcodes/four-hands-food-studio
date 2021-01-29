@@ -10,7 +10,7 @@ function Shop(props) {
   const productList = useSelector((state) => state.productList);
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     dispatch(listProducts(category));
     window.scrollTo(0, 0);
@@ -30,13 +30,8 @@ function Shop(props) {
 
   return (
     <section className="aboutContainer">
-      {/* <div className="vl"></div> */}
-      {/* <div className="coloredBox violet">
-          <h2>Products</h2>
-        </div> */}
       <br />
       <div className="">
-        {/* <h1 id="products">Products</h1> */}
         {loading ? (
           <div>Loading...</div>
         ) : error ? (
@@ -67,26 +62,29 @@ function Shop(props) {
                     </div>
 
                     <div className="">
-                      <Link
-                        className=""
-                        to={"/product/" + product._id}
-                      >
-                        {" "}
-                        <div className="buttonDivHomepageProduct orangeButton">
-                          Curious?{" "}
-                        </div>
-                      </Link>
+                      
                       {product.countInStock > 0 ? (
-                        <div
-                          onClick={(product) => handleAddToCart(product)}
-                          id="greenButton"
-                          className="greenButtonLight whitetext"
-                        >
-                          Add to Cart
+                        <div>
+                        <Link className="" to={"/product/" + product._id}>
+                        <div className="buttonDivHomepageProduct orangeButton">
+                            Curious?{" "}
+                          </div>
+                       </Link>
+                          <div
+                            onClick={(product) => handleAddToCart(product)}
+                            className="greenButtonLight whitetext"
+                          >
+                            Add to Cart
+                          </div>
                         </div>
                       ) : (
-                        <div className="whitetext blackButton">
-                          <a className="whitetext">Out of Stock</a>
+                        <div>
+                          <div className="buttonDivHomepageProduct orangeButton">
+                            Curious?
+                          </div>
+                          <div className="whitetext blackButton">
+                            <a className="whitetext">Out of Stock</a>
+                          </div>
                         </div>
                       )}
                     </div>
